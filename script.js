@@ -1,6 +1,6 @@
 const style=document.createElement("style");
 style.innerText=`
-#grid-container{
+.grid-container{
 display:grid;
 grid-template-rows:repeat(3,1fr);
 grid-template-columns:repeat(3,1fr);
