@@ -32,7 +32,7 @@ border-radius:5px
 }`;
 	document.head.appendChild(style);
 const grid=document.createElement("div");
-grid.id="grid-container";
+grid.className="grid-container";
 document.body.appendChild(grid);
 for (let i = 0; i <9; i++) {
 	const gridItem=document.createElement("div");
@@ -49,11 +49,11 @@ blockco.placeholder="enter your color"
 document.body.appendChild(blockco);
 const button=document.createElement("button");
 button.id="change_button";
-button.innerText="Change color"
+button.innerText="Change"
 document.body.appendChild(button);
 const buttons=document.createElement("button");
-buttons.id="Reset";
-buttons.innerText="reset button"
+buttons.id="restet_button";
+buttons.innerText="Reset"
 button.addEventListener("click", () => {
     const blockId = Number(blockin.value);
     const color = blockco.value;
