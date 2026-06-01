@@ -31,30 +31,34 @@ padding:10px;
 border-radius:5px
 }`;
 	document.head.appendChild(style);
-const grid=document.createElement("div");
-grid.className="grid-container";
+const grid = document.createElement("div");
+grid.className = "grid-container";
 document.body.appendChild(grid);
-for (let i = 0; i <9; i++) {
-	const gridItem=document.createElement("div");
-	gridItem.className="grid-item";
-	grid.appendChild(gridItem);
+
+for (let i = 1; i <= 9; i++) {
+    const gridItem = document.createElement("div");
+    gridItem.className = "grid-item";
+    gridItem.innerText = i;
+    grid.appendChild(gridItem);
 }
-const blockin=document.createElement("input");
-blockin.id="block_id";
-blockin.placeholder="enter block id"
+
+const blockin = document.createElement("input");
+blockin.id = "block_id";
 document.body.appendChild(blockin);
-const blockco=document.createElement("input");
-blockco.id="colour_id";
-blockco.placeholder="enter your color"
+
+const blockco = document.createElement("input");
+blockco.id = "colour_id";
 document.body.appendChild(blockco);
-const button=document.createElement("button");
-button.id="change_button";
-button.innerText="Change"
+
+const button = document.createElement("button");
+button.id = "change_button";
+button.innerText = "Change";
 document.body.appendChild(button);
-const buttons=document.createElement("button");
-buttons.id="reset_button";
-buttons.innerText="Reset"
-document.body.appendChild(buttons);
+
+const resetBtn = document.createElement("button");
+resetBtn.id = "reset_button";
+resetBtn.innerText = "Reset";
+document.body.appendChild(resetBtn);
 button.addEventListener("click", () => {
     const blockId = Number(blockin.value);
     const color = blockco.value;
