@@ -1,6 +1,6 @@
 const style=document.createElement("style");
 style.innerText=`
-#grid-container{
+.grid-container{
 display:grid;
 grid-template-rows:repeat(3,1fr);
 grid-template-columns:repeat(3,1fr);
@@ -8,7 +8,7 @@ gap:5px;
 padding:4px;
 // background-color:black;
 }
-#grid-item{
+.grid-item{
 	height:150px;
 	border:1px solid black;	
 }
