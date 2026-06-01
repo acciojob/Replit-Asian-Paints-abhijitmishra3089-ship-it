@@ -6,9 +6,9 @@ grid-template-rows:repeat(3,1fr);
 grid-template-columns:repeat(3,1fr);
 gap:5px;
 padding:4px;
-// background-color:black;
+/*background-color:black;*/
 }
-#grid-item{
+.grid-item{
 	height:150px;
 	border:1px solid black;	
 }
@@ -36,7 +36,7 @@ grid.id="grid-container";
 document.body.appendChild(grid);
 for (let i = 0; i <9; i++) {
 	const gridItem=document.createElement("div");
-	gridItem.id="grid-item";
+	gridItem.className="grid-item";
 	grid.appendChild(gridItem);
 }
 const blockin=document.createElement("input");
@@ -54,4 +54,24 @@ document.body.appendChild(button);
 const buttons=document.createElement("button");
 buttons.id="Reset";
 buttons.innerText="reset button"
+button.addEventListener("click", () => {
+    const blockId = Number(blockin.value);
+    const color = blockco.value;
+
+    const blocks = document.querySelectorAll(".grid-item");
+
+    if(blockId >= 1 && blockId <= blocks.length){
+        blocks[blockId - 1].style.backgroundColor = color;
+    } else {
+        alert("Invalid Block ID");
+    }
+});
+buttons.addEventListener("click", () => {
+    document.querySelectorAll(".grid-item").forEach(block => {
+        block.style.backgroundColor = "";
+    });
+
+    blockin.value = "";
+    blockco.value = "";
+});
 document.body.appendChild(buttons);
