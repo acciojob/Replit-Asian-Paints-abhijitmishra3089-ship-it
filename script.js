@@ -71,7 +71,7 @@ button.addEventListener("click", () => {
         alert("Invalid Block ID");
     }
 });
-buttons.addEventListener("click", () => {
+resetBtn.addEventListener("click", () => {
     document.querySelectorAll(".grid-item").forEach(block => {
         block.style.backgroundColor = "";
     });
