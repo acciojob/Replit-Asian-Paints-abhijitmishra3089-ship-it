@@ -52,8 +52,9 @@ button.id="change_button";
 button.innerText="Change"
 document.body.appendChild(button);
 const buttons=document.createElement("button");
-buttons.id="restet_button";
+buttons.id="reset_button";
 buttons.innerText="Reset"
+document.body.appendChild(buttons);
 button.addEventListener("click", () => {
     const blockId = Number(blockin.value);
     const color = blockco.value;
