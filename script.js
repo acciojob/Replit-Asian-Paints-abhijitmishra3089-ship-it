@@ -44,7 +44,7 @@ blockin.id="block_id";
 blockin.placeholder="enter block id"
 document.body.appendChild(blockin);
 const blockco=document.createElement("input");
-blockco.id="color_id";
+blockco.id="colour_id";
 blockco.placeholder="enter your color"
 document.body.appendChild(blockco);
 const button=document.createElement("button");
