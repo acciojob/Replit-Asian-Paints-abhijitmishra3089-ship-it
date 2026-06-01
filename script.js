@@ -37,7 +37,7 @@ document.body.appendChild(grid);
 for (let i = 0; i <9; i++) {
 	const gridItem=document.createElement("div");
 	gridItem.className="grid-item";
-	gridItem.innerText=i+1;
+	gridItem.innerText=i;
 	grid.appendChild(gridItem);
 }
 const blockin=document.createElement("input");
@@ -50,11 +50,11 @@ blockco.placeholder="enter your color"
 document.body.appendChild(blockco);
 const button=document.createElement("button");
 button.id="change_button";
-button.innerText="Change color"
+button.innerText="Change"
 document.body.appendChild(button);
 const buttons=document.createElement("button");
-buttons.id="Reset";
-buttons.innerText="reset button"
+buttons.id= "reset_button";
+buttons.innerText="Reset";
 document.body.appendChild(buttons);
 button.addEventListener("click", () => {
     const blockId = Number(blockin.value);
