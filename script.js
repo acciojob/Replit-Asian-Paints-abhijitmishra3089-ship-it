@@ -37,7 +37,7 @@ document.body.appendChild(grid);
 for (let i = 0; i <9; i++) {
 	const gridItem=document.createElement("div");
 	gridItem.className="grid-item";
-	gridItem.innerText=i;
+	gridItem.innerText=i+1;
 	grid.appendChild(gridItem);
 }
 const blockin=document.createElement("input");
